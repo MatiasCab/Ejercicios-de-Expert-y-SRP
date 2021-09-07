@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace SRP
 {
@@ -7,11 +9,11 @@ namespace SRP
     {
         static void Main(string[] args)
         {
-            Libro libro1 = new Libro("Design Patterns","Erich Gamma & Others","001-034");
-            Libro libro2 = new Libro("Pro C#","Troelsen","001-035");
-            libro1.AlmacenarLibro("A","7");
-            libro2.AlmacenarLibro("B","3");
-
+            Biblioteca BibliotecaUCU = new Biblioteca();
+            LibroId libro1=new LibroId("Design Patterns","Erich Gamma & Others","001-034");
+            LibroId libro2=new LibroId("Pro C#","Troelsen","001-035");
+            BibliotecaUCU.AlmacenarLibro(libro1,"A","7");
+            BibliotecaUCU.AlmacenarLibro(libro2,"B","3");
         }
     }
 }
